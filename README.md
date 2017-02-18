@@ -1,24 +1,29 @@
-# README
+# User API(CRUD) With Api-Key
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.3
 
-* System dependencies
+* Rails 5.0.1
 
-* Configuration
+* Devise(Gemfile)
 
-* Database creation
+* active_model_serializers(Gemfile)
 
-* Database initialization
+* Database Mysql
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+ex. Generate Key : <br />
+1. Rails Console
+2. Apikey.create!
 
-* Deployment instructions
 
-* ...
+ex Link url : <br />
+
+**(GET) http://localhost:3000/api/v1/users?token=Params**<br />
+**(POST) http://localhost:3000/api/v1/users?token=Params**<br />
+**(GET) http://localhost:3000/api/v1/users/id?token=Params**<br />
+**(PUT/PATCH) http://localhost:3000/api/v1/users/id?token=Params**
+
