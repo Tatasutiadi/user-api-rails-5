@@ -44,11 +44,14 @@ class Api::V1::UsersController < ApplicationController
   def restrict_access
     api_key = ApiKey.find_by_access_token(params[:token])
     head :unauthorized unless api_key
+    # # with header
     # authenticate_or_request_with_http_token do |token, options|
+    #   #curl localhost:3000/api/v1/users/1 -H 'Authorization: Token token="c07f3eb6844f82302168587926827"'
     #   # Compare the tokens in a time-constant manner, to mitigate
     #   # timing attacks.
     #   ApiKey.exists?(access_token: token)
     # end
+    # #end header
   end
 
 end
